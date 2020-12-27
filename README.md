@@ -116,6 +116,13 @@ We currently lack some specific standard for the output of solvers, although [so
 }
 ```
 
+## avoid large instances
+
+It is strongly recommended to NOT including large packs of instances together with solver (only with one or two small examples). Instead, open another repository with prefix `instances`, e.g., "instances_solver_kp01_generic". The reason is that, when composing several solvers, project size may drastically increase, making it unfeasible to explore interesting solver composition strategies.
+
+On the other hard, one is encouraged to include the "solver project" as dependency of the "instance" repository (this can be easily done with submodules or bazel git_repository rules).
+In this sense, large instances are very welcome, as long as they are separated from main solver files.
+
 ## license
 
 CombZoo is a free project, so are all solvers submitted to this project. Free licenses can be accepted but limiting side effects may happen with some GNU licenses, so MIT License / Creative Commons are recommended on general.
