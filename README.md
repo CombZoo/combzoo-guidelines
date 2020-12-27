@@ -102,6 +102,20 @@ bazel build ...
 ./bazel-bin/app_KP01_generic --config default_kp01.json
 ```
 
+## extensions
+
+We plan to extend this document with guidelines for other popular languages (such as Python, Java, etc), since many solvers are currently designed in these languages. The general advice for command-line already applies for these languages, but some library-oriented is also welcome, since this allows solving process to be performed without any disk access (no read/write files).
+
+We currently lack some specific standard for the output of solvers, although [solver_kp01_generic](github.com/combzoo/solver_kp01_generic) may already give some ideas on that:
+
+```{.json}
+{
+  "best_value" : 7,
+  "status" : 0,
+  "time_spent" : 0.24
+}
+```
+
 ## license
 
 CombZoo is a free project, so are all solvers submitted to this project. Free licenses can be accepted but limiting side effects may happen with some GNU licenses, so MIT License / Creative Commons are recommended on general.
