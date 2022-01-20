@@ -18,7 +18,7 @@ To be able to interoperate with other solvers, we require that solvers implement
 ```{.cpp}
 extern "C"
 {
-   int solver_kp01_generic(int format, const char* config, char* output);
+   int solve_kp01_generic(int format, const char* config, char* output);
 
    int info_kp01_generic(int format, const char* key, char* output);
 
@@ -26,7 +26,7 @@ extern "C"
 ```
 
 The naming convention for the functions is the following:
-- prefix (`solver` or `info`)
+- prefix (`solve` or `info`)
 - problem name (in the above example, `kp01`)
 - solver name (in the above example, `generic`)
 
